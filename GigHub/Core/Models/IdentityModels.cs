@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 
 namespace GigHub.Models
 {
-    // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
-
+        //LDP1_001
         //LD I'm adding a custom field to "ApplicationUser"
         [Required]
         [StringLength(100)]

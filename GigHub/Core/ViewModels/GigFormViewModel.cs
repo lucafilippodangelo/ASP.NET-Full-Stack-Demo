@@ -16,7 +16,7 @@ namespace GigHub.ViewModels
         public string Venue { get; set; }
 
         [Required]
-        [FutureDate]
+        [FutureDate] //LDP1_002
         public string Date { get; set; }
 
         [Required]

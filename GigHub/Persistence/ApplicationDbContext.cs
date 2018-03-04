@@ -13,8 +13,7 @@ namespace GigHub.Models
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<UserNotification> UserNotifications { get; set; }
 
-        public ApplicationDbContext()
-            : base("CustomConnectionGit", throwIfV1Schema: false)
+        public ApplicationDbContext() : base("CustomConnectionGit", throwIfV1Schema: false)
         { 
         }
 
@@ -25,13 +24,15 @@ namespace GigHub.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
+            //LDP1_004
             /*
             //LD BEFORE, with this code I have a "REVERSE RELATIONSHIP" problem
             //modelBuilder.Entity<Attendance>()
             //    .HasRequired(a => a.Gig)
             //    .WithMany()
             //    .WillCascadeOnDelete(false);
+
+            //LDP1_004
             //LD AFTER
             modelBuilder.Entity<Attendance>()
             .HasRequired(a => a.Gig)
