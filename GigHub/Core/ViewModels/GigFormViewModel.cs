@@ -34,16 +34,25 @@ namespace GigHub.ViewModels
         {
             get
             {
+                /* //LD some theory:
+                 * TO RESUME, this lampda "c => c.Update(this)" represent a method that take "c" as parameter 
+                 * and return an "ActionResult". "this" is the view model.
+                 * I can use "Func<xxx,xxx>" that is a DELEGATE to represent that. So "Func" is the delegate that 
+                 * allow us to call the anonymus method. 
+                 * Depend on the parameter I will I will get the anme of the method at runtime.
+                 
+                 */
+
+                //LDP2_002
                 //LD old way to do
                 //return (Id != 0) ? "Update" : "Create";
 
-                //LD LAMPDA EXPRESSION
-                //this expression rapresent the "Update" action in the GigController
+                //this expression rapresent the "Update" action in the GigController.
                 Expression<Func<GigsController, ActionResult>> update =
                     (c => c.Update(this));
 
                 Expression<Func<GigsController, ActionResult>> create =
-                    (c => c.Create(this));
+                    (c => c.Create(this)); 
 
                 var action = (Id != 0) ? update : create;
 

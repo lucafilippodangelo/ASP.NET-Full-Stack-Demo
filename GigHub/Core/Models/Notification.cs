@@ -17,7 +17,7 @@ namespace GigHub.Models
         protected Notification()
         {
         }
-
+        //LDP2_003
         //LD make it "private" because of the FACTORY METHOD below
         private Notification(NotificationType type, Gig gig)
         {
@@ -29,12 +29,13 @@ namespace GigHub.Models
             DateTime = DateTime.Now;
         }
 
+        //LDP2_003
         //LD STATIC FACTORY METHOD
         public static Notification GigCreated(Gig gig)
         {
             return new Notification(NotificationType.GigCreated, gig);
         }
-
+        //LDP2_003
         //LD STATIC FACTORY METHOD
         public static Notification GigUpdated(Gig newGig, DateTime originalDateTime, string originalVenue)
         {
@@ -44,7 +45,7 @@ namespace GigHub.Models
 
             return notification;
         }
-
+        //LDP2_003
         //LD STATIC FACTORY METHOD
         //LD we return the specific kind of type "Notification"
         public static Notification GigCanceled(Gig gig)

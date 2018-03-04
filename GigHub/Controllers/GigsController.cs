@@ -77,7 +77,7 @@ namespace GigHub.Controllers
             return View("Details", viewModel);
         }
 
-
+        //LDP2_001
         // GET: Gigs/Create
         [Authorize] 
         public ActionResult Create()
@@ -95,6 +95,7 @@ namespace GigHub.Controllers
             
         }
 
+        //LDP2_001
         // POST: Gigs/Create
         [Authorize]
         [HttpPost]
@@ -124,7 +125,7 @@ namespace GigHub.Controllers
 
             return RedirectToAction("Mine", "Gigs"); //LD after that I create a Gig I will be redirected to the view with all my GIGS
         }
- 
+
 
 
         //// GET: Gigs/Edit/5
@@ -142,6 +143,7 @@ namespace GigHub.Controllers
         //    return View(gig);
         //}
 
+        //LDP2_001
         [Authorize]
         public ActionResult Edit(int id)
         {
@@ -192,8 +194,7 @@ namespace GigHub.Controllers
         //    return RedirectToAction("Index");
         //}
 
-
-
+        //LDP2_001
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
