@@ -10,7 +10,7 @@ namespace GigHub.Controllers
     public class GigsController : Controller
     {
         private readonly IUnitOfWork _unitOfWork; //LD add a reference to "UnitOfWork"
-
+        //LDP3_001
         public GigsController(IUnitOfWork unitOfWork)//LD DEPENDENCY INJECTION, I pass this parameter
         {
             _unitOfWork = unitOfWork;//LD I initialize my provate _UnitOfWork 
@@ -67,7 +67,8 @@ namespace GigHub.Controllers
             if (User.Identity.IsAuthenticated) //LD just if the user is authenticated.
             {
                 var userId = User.Identity.GetUserId();
-
+                
+                //LDP3_001
                 //LD in "Attendances" we check if we have any objects that match criterias
                 viewModel.IsAttending = _unitOfWork.Attendances .GetAttendance(gig.Id, userId) != null;
 

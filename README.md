@@ -6,9 +6,7 @@ Download the code and search for matching label as "//LDP1_001, //LDP1_002" for 
 
 ## Project Part One 
 - code first workflow
-- productivity tools
-- convention over configuration
-- script to fill the database
+- script to seed the database
 - build a form with bootstrap
 - view models
   - saving data 
@@ -23,7 +21,6 @@ Download the code and search for matching label as "//LDP1_001, //LDP1_002" for 
     - how to prevent:
       - @Html.AntiForferyToken() into the view form
       - [ValidateAntiForgeryToken] in our controller action
-- usability best practises
 - extending asp.net identity users (//LDP1_001)
 - absolute and relative positioning in css
 - join table and multiple cascade paths (//LDP1_003)
@@ -57,44 +54,26 @@ Download the code and search for matching label as "//LDP1_001, //LDP1_002" for 
   - manual mapping
   - automapper
 - implementing search
-- query string to make the search bookmarkable
+  - query string to make the search bookmarkable
 
 ## Project Part Three
 
-- linq "any"
-LINQ "Any" -> useful to query in a list and set a BOLEAN under conditon.
-LINK "Lookup" -> useful to look into a list by a specific attibute value. I used it in a view, under condition(see code).
-REVEALING MODULE PATTERN -> create classes in javascript with PUBLIC RETURN
-REPOSITORY PATTERN
-EXTRACTING QUERIES WITH EAGER LOADING
-CLEAN ARCHITECTURE
-DEPENDENCY INVERSION PRINCIPLE
-UNIT OF WORK PATTERN
-CONSOLIDATING DEPENDENCIES
-PROGRAMMING AGAINST INTERFACES --> the key for anything
-DEPENDENCY INVERSION PRINCIPLE (study from another course and come back hete... it is not easy)
-DEPENDENCY INJECTION
-CODE IS COMPLETELY DISCONNECTED FROM THE REPOSITORY
-REORGANIZE DATA ANNOTATIONS BY USE FLUENT APY
-
-TESTING CONTROLLERS
-
-MOCKING THE CURRENT USER
-EXTENSION METHOD (=== IMPORTANTE RIPASSARE LA TEORIA NON RICORDO BENE COSA MINCHIA FANNO STO TIPO DI METODI ===)
-MOCK OF THE REPOSITORY
-FIRST TEST
-#
-provare ad implementare semplici test utilizzando i metodi standard di visual studio e non semplicemente con le api scaricate FLUENT ASSERTION (posso cercare tra gli appunti)
-
-#
-TEST THE BEHAVIOR NOT THE IMPLEMENTATION
-TESTING THE DOMAIN CLASSES
-
-TESTING REPOSITORIES
-
-INTEGRATION TESTS
-
-NUNIT
-TRANSACTION SCOPE
-
-  ```
+- linq 
+  - "any", useful to query in a list and set a boolean under conditon
+  - "Lookup", useful to look into a list by a specific attibute value. I used it in a view, under condition.
+- "revealing module pattern", create classes in javascript with PUBLIC RETURN
+- "repository "pattern", the data access layer must be responsible for queryes, the controller is just a manager of process flow. The main reason of this pattern is avoid duplication of queryes in provate methods of the controller and improve the separation of concern principle. **Repository** is a collection of objects in memory, so I don't need to save in the repository.
+  - "dependency inversion principle", high level module should not depend on low level module, should depend on abstraction. For instance, in order to don't recompile the controller, controller and class must have in the middle an interface "**controller --> IUnitOfWork <-- UnitOfWork**". To recap:  Abstractions should not depend on details(or concrete implementation). Details(or concrete implementation) should depend on abstraction.
+- extracting queries with eager loading
+- clean architecture
+- unit of work pattern (//LDP3_001) mantains a list of object affected by business transaction and coordinates the writing of the changes.
+- consolidating dependencies
+- programming against interfaces
+- testing 
+  - controllers
+  - mock the current user
+  - repository mock
+  - extensions method
+  - classes
+  - repositoryes
+  - integration tests
