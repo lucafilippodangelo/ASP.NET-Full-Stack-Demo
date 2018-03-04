@@ -14,6 +14,7 @@ namespace GigHub.Controllers.Api
             _unitOfWork = unitOfWork;
         }
 
+        //LDP3_002
         [HttpDelete]
         public IHttpActionResult Cancel(int id)
         {

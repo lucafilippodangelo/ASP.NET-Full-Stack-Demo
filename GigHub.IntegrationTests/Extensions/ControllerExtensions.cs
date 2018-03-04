@@ -8,6 +8,13 @@ namespace GigHub.IntegrationTests.Extensions
 {
     public static class ControllerExtensions
     {
+        /*
+         * //LDP3_004
+        //LD to don't revrite code when I have to test a controller and I have to create an user. 
+        to do that he create an EXTENSION METHOD TO APPLY TO THE CONTROLLER in the folder "Extensions" -> 
+        "ApiControllerExtensions.cs"
+        by doing that we are creating IDENTITY and PRINCIPLE OBJECT to MOC THE USER
+        */
 
         public static void MockCurrentUser(this Controller controller, string userId, string username)
         {

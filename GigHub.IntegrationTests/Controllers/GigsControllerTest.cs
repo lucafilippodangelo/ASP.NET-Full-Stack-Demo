@@ -20,6 +20,7 @@ namespace GigHub.IntegrationTests.Controllers
         [SetUp]
         public void SetUp()
         {
+            //LDP3_003
             _context = new ApplicationDbContext();
             _controller = new GigsController(new UnitOfWork(_context));
         }
@@ -39,7 +40,7 @@ namespace GigHub.IntegrationTests.Controllers
         //    var gigs = _unitOfWork.Gigs.GetUpcomingGigsByArtist(userId);
         //    return View(gigs);
         //}
-        [Test ,Isolated ]
+        [Test ,Isolated]
         public void Mine_WhenCalled_ShouldReturnUpcomingGigs()
         {
             // Arrange ################################

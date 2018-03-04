@@ -5,6 +5,7 @@ using System.Linq;
 
 namespace GigHub.Tests.Domain.Models
 {
+    //LDP3_008
     [TestClass]
     public class ApplicationUserTests
     {

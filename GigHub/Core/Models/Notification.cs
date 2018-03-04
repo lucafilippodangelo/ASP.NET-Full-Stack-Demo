@@ -10,9 +10,9 @@ namespace GigHub.Models
         public NotificationType Type { get; private set; }
         public DateTime? OriginalDateTime { get; private set; }
         public string OriginalVenue { get; private set; }
-
         [Required] //LD by this we make sure that the corrisponding column in the database is not nullable
         public Gig Gig { get; private set; }
+        
 
         protected Notification()
         {

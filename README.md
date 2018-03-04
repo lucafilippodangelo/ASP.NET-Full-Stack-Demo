@@ -69,11 +69,14 @@ Download the code and search for matching label as "//LDP1_001, //LDP1_002" for 
 - unit of work pattern (//LDP3_001) mantains a list of object affected by business transaction and coordinates the writing of the changes.
 - consolidating dependencies
 - programming against interfaces
-- testing 
+- testing. Used libraries "Moq" and "Fluent Assertions"
   - controllers
+    - integration. I worked on the "Cancel" action of API "GigController.cs" (//LDP3_002, //LDP3_003, //LDP3_004)
+	- unit. (//LDP3_006)
   - mock the current user
   - repository mock
   - extensions method
-  - classes
+  - classes (//LDP3_007, //LDP3_008, //LDP3_009)
   - repositoryes
-  - integration tests
+    - unit (//LDP3_005)
+

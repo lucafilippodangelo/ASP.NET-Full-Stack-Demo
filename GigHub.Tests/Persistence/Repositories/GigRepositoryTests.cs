@@ -9,6 +9,11 @@ using System.Data.Entity;
 
 namespace GigHub.Tests.Persistence.Repositories
 {
+    //LDP3_005
+    /*
+     * This repository USE A CONCRETE class "ApplicationDbContext", to test it we have to create a database 
+     * or EXTRACT TO AN INTERFACE and doing that we can MOCK it in our UNIT TEST
+     */
     [TestClass]
     public class GigRepositoryTests
     {

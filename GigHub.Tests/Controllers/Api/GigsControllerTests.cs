@@ -11,6 +11,7 @@ using System.Web.Http.Results;
 
 namespace GigHub.Tests.Controllers.Api
 {
+    //LDP3_006
     [TestClass]
     public class GigsControllerTests
     {
@@ -23,16 +24,15 @@ namespace GigHub.Tests.Controllers.Api
         // CONTROLLER AND THE USER THAT I WANT TEST
         public GigsControllerTests()
         {
-
             _mockRepository = new Mock<IGigRepository>();
 
-            //LD grazie alle semplici linee sotto facciamo il MOC do "IUnitOfWork"
+            //LD MOCK of "IUnitOfWork"
             var mockUoW = new Mock<IUnitOfWork>(); 
 
-            //LD ora facciamo il moc della specifica repository che ci serve
+            //LD MOCK of a specific repository in unitOfWork 
             mockUoW .SetupGet (u => u.Gigs).Returns (_mockRepository .Object ); 
 
-            //LD vogliamo fare il MOC dello specifico controller
+            //LD mock of the specific controller
              _controller = new GigsController(mockUoW.Object);
              _userId = "1";
             //LD we will assign the user to the controller into the method "MockCurrentUser".
